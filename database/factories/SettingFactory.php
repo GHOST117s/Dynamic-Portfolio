@@ -18,10 +18,10 @@ class SettingFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => 'Mutaman Portfolio',
-            'meta_title' => 'Mutaman | Web Developer | Portfolio',
-            'meta_author' => 'Mutaman',
-            'meta_description' => 'Hey, I&#039;m Mutaman, a full-stack web developer with a passion for software architecture and clean code. Over the last 4 years, I have developed and maintained complex Web apps using mainly Larave and Vue.',
+            'name' => 'Sidharth kumar samal Portfolio',
+            'meta_title' => 'Sidharth kumar samal  | Web Developer | Portfolio',
+            'meta_author' => 'Sidharth kumar samal',
+            'meta_description' => 'Hey, I&#039;m Sidharth kumar samal, a full-stack web developer with a passion for software architecture and clean code. Over the last 4 years, I have developed and maintained complex Web apps using mainly Larave and Vue.',
             'meta_keywords' => 'HTML, CSS, JavaScript, Laravel, Vue.js, Full-stack web development, Software architecture, Clean code, Web app development, Web app maintenance, PHP, Front-end development, Back-end development, Responsive design, RESTful APIs, Version control, Git, Node.js, SQL, MySQL, Web frameworks, Progressive Web Apps, Cross-browser compatibility, Agile methodologies, UX/UI design, MVC architecture, API integration, Code optimization'
         ];
     }

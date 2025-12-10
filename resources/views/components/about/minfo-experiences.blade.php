@@ -37,7 +37,7 @@
                     {{ $experience->name }}
                 </h4>
                 <p>
-                    {{ $experience->description }}
+                    {!! $experience->description !!}
                 </p>
             </div>
         </li>

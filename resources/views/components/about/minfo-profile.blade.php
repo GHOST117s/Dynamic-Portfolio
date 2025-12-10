@@ -1,21 +1,21 @@
 <!-- Sidebar Profile Start -->
 <div class="w-full mx-auto minfo__sidebar__wrapper xl:fixed xl:top-1/2 xl:left-4 2xl:left-14 xl:-translate-y-1/2 md:max-w-sidebar xl:max-2xl:max-w-xs z-999">
-    <div class="p-3 mb-3 overflow-hidden minfo__sidebar bg-white dark:bg-nightBlack rounded-2xl">
+    <div class="p-3 mb-3 overflow-hidden bg-white minfo__sidebar dark:bg-nightBlack rounded-2xl">
         <div class="mx-4 mt-12 text-center user-info lg:mx-6">
             <a href="#"
                class="w-36 mb-2.5 h-3w-36 block mx-auto border-6 border-platinum dark:border-[#2f2f2f] overflow-hidden rounded-full">
                 @if($profile->avatar)
                     <x-curator-glider
-                        class="hidden dark:block w-full h-full rounded-full bg-secondary-300 bg-gradient-to-tl from-primary-500 to-tertiary-500"
+                        class="hidden w-full h-full rounded-full dark:block bg-secondary-300 bg-gradient-to-tl from-primary-500 to-tertiary-500"
                         :media="$profile->avatar" />
                 @else
                     <img
                         src="{{ asset('img/core/profile-picture.png') }}"
-                        class="hidden dark:block w-full h-full rounded-full bg-secondary-300 bg-gradient-to-tl from-primary-500 to-tertiary-500"
+                        class="hidden w-full h-full rounded-full dark:block bg-secondary-300 bg-gradient-to-tl from-primary-500 to-tertiary-500"
                         alt="{{  $profile->user->name }}"> <!--Image for Dark Version -->
                     <img
                         src="{{ asset('img/core/profile-picture.png') }}"
-                        class="dark:hidden w-full h-full rounded-full bg-secondary-300 bg-gradient-to-tl from-primary-500 to-tertiary-500"
+                        class="w-full h-full rounded-full dark:hidden bg-secondary-300 bg-gradient-to-tl from-primary-500 to-tertiary-500"
                         alt="{{  $profile->user->name }}"> <!--Image for Light Version -->
                 @endif
                 @if($profile->is_open_to_work)
@@ -23,9 +23,9 @@
                         <a href="{{'https://' . $profile->linkedin }}" target="_blank">
                             @endif
                             <div
-                                class="absolute -ml-12 -mt-7 inline-block w-auto rounded-sm bg-gradient-to-tl from-primary-500 to-indigo-500 p-1 text-xs text-white lg:-mt-7">
+                                class="absolute inline-block w-auto p-1 -ml-12 text-xs text-white rounded-sm -mt-7 bg-gradient-to-tl from-primary-500 to-indigo-500 lg:-mt-7">
                                 <span class="flex items-center gap-1 font-semibold">
-                                    <ion-icon class="h-3 w-3" name="logo-linkedin"></ion-icon>
+                                    <ion-icon class="w-3 h-3" name="logo-linkedin"></ion-icon>
                                     {{ __('Open to Work') }}
                                 </span>
                             </div>
@@ -39,27 +39,14 @@
             <div class="leading-none cd-headline clip is-full-width">
                 <h6 class="text-sm cd-words-wrapper designation text-theme after:!bg-theme">
                     <b class="font-normal is-visible">{{ __('Full-Stack Web Developer') }}</b>
-                    <b class="font-normal">{{  __('PHP Laravel Develuper') }}</b>
+                    <b class="font-normal">{{  __('PHP Laravel Developer') }}</b>
                     <b class="font-normal">{{  __('Vue Js, Nuxt Developer') }}</b>
                 </h6>
             </div>
 
         </div>
         <div class="pt-6 mx-4 border-t lg:mx-6 user-meta-info md:mx-7 my-7 border-platinum dark:border-metalBlack">
-{{--            <ul class="space-y-3">--}}
-{{--                <li class="flex text-sm">--}}
-{{--                    <span class="flex-1 font-medium text-black dark:text-white">Residence:</span>--}}
-{{--                    <span>Canada</span>--}}
-{{--                </li>--}}
-{{--                <li class="flex text-sm">--}}
-{{--                    <span class="flex-1 font-medium text-black dark:text-white">City:</span>--}}
-{{--                    <span>Toronto</span>--}}
-{{--                </li>--}}
-{{--                <li class="flex text-sm">--}}
-{{--                    <span class="flex-1 font-medium text-black dark:text-white">Age:</span>--}}
-{{--                    <span>26</span>--}}
-{{--                </li>--}}
-{{--            </ul>--}}
+{{-- remove radiance from left sidebar --}}
                 <x-ui.social-network />
         </div>
         <div class="px-4 py-5 lg:py-6 lg:px-6 rounded-2xl md:px-8 bg-flashWhite dark:bg-metalBlack">
